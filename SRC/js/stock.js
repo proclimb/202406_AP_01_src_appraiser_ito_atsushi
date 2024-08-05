@@ -9,12 +9,12 @@ function fnStockEditCheck() {
 	}
 
 	tmp = form.article.value;
-	if (tmp.length == 0) {
+	if (tmp.length == 0 || !tmp.trim()) {
 		alert('物件名を入力してください');
 		return;
 	}
-	if (tmp.length == 0 || !tmp.trim()) {
-		alert('物件名を入力してください');
+	if (tmp.length > 100) {
+		alert('物件名は100文字以内で入力してください');
 		return;
 	}
 
