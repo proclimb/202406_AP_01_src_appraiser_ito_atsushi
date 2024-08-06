@@ -354,6 +354,7 @@ function subStockEditView($param)
 					for ($i = 0; $i < 6; $i++) {
 					?>
 						<br />
+						<?php
 						if (!$param["stockNo"]) {
 						$param["how"] = 1;
 						}
