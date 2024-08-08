@@ -1,9 +1,10 @@
-**
+/**
  * 日付チェック
 	* @param msg エラー時に表示したい項目名
 		* @param oYMD チェックする日付
 			* @return true: 正常、false: 異常
 				*/
+
 function fnYMDCheck(msg, obj) {
 	// 未入力時はチェックしない
 	oYMD = obj.value;
