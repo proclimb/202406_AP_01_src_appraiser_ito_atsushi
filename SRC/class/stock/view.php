@@ -274,7 +274,7 @@ function subStockEditView($param)
 							$check = 'checked = "checked"';
 						}
 					?>
-						<input type="radio" name="rank" value="<?php print $i + 1; ?>" <?php print $check; ?> /> <?php print fnRankName($i); ?>
+						<input type="radio" name="rank" value="<?php print $i; ?>" <?php print $check; ?> /> <?php print fnRankName($i); ?>
 					<?php
 					}
 					?>
