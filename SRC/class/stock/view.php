@@ -253,7 +253,7 @@ function subStockEditView($param)
 						$check1 = "checked";
 					}
 					?>
-					<input type="radio" name="del" value="1" checked <?php print $check1; ?> /> 非除外
+					<input type="radio" name="del" value="1" <?php print $check1; ?> /> 非除外
 					<input type="radio" name="del" value="0" <?php print $check2; ?> /> 除外
 				</td>
 			</tr>
