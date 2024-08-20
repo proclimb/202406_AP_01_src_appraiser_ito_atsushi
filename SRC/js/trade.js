@@ -76,13 +76,13 @@ function fnTradeEditCheck() {
 		form.act.value = 'tradeEditComplete';
 		form.submit();
 	}
+}
 
 
-
-	function fnTradeDeleteCheck(no) {
-		if (confirm('削除します。よろしいですか？')) {
-			form.tradeNo.value = no;
-			form.act.value = 'tradeDelete';
-			form.submit();
-		}
+function fnTradeDeleteCheck(no) {
+	if (confirm('削除します。よろしいですか？')) {
+		form.tradeNo.value = no;
+		form.act.value = 'tradeDelete';
+		form.submit();
 	}
+}
