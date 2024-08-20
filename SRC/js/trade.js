@@ -73,16 +73,15 @@ function fnTradeEditCheck() {
 	}
 
 	if (confirm('この内容で登録します。よろしいですか？')) {
-		form.act.value = 'tradeEditCompleta';
+		form.act.value = 'tradeEditComplete';
 		form.submit();
 	}
-}
 
 
 
-function fnTradeDeleteCheck(no) {
-	if (confirm('削除します。よろしいですか？')) {
-		form.tradeNo.value = no;
-		form.submit();
+	function fnTradeDeleteCheck(no) {
+		if (confirm('削除します。よろしいですか？')) {
+			form.tradeNo.value = no;
+			form.submit();
+		}
 	}
-}
