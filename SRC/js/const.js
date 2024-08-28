@@ -27,18 +27,18 @@ function fnConstEditCheck() {
 																if (isLength(100, "ガス連絡者", form.gasCharge))
 																	if (isLength(100, "荷＆鍵引取", form.receive))
 																		if (isLength(100, "給湯", form.hotWater))
-																			if (fnYMDCheck("正しい現調日付", form.siteDate))
-																				if (isLength(100, "届出用紙", form.leavingForm))
-																					if (fnYMDCheck("正しい届出期日", form.leavingDT))
-																						if (isLength(100, "管理会社", form.manageCompany))
-																							if (isLength(100, "管理室", form.floorPlan))
-																								if (isLength(100, "前所有者", form.formerOwner))
-																									if (isLength(100, "仲介会社（担当）", form.brokerCharge))
-																										if (isLength(100, "仲介会社（連絡先）", form.brokerContact))
-																											if (isLength(100, "内装担当者", form.interiorCharge))
+																			if (!fnYMDCheck("正しい現調日付", form.siteDate)) { return; }
+	if (isLength(100, "届出用紙", form.leavingForm))
+		if (fnYMDCheck("正しい届出期日", form.leavingDT))
+			if (isLength(100, "管理会社", form.manageCompany))
+				if (isLength(100, "管理室", form.floorPlan))
+					if (isLength(100, "前所有者", form.formerOwner))
+						if (isLength(100, "仲介会社（担当）", form.brokerCharge))
+							if (isLength(100, "仲介会社（連絡先）", form.brokerContact))
+								if (isLength(100, "内装担当者", form.interiorCharge))
 
-																												if (confirm('この内容で登録します。よろしいですか？')) {
-																													form.act.value = 'constEditComplete';
-																													form.submit();
-																												}
+									if (confirm('この内容で登録します。よろしいですか？')) {
+										form.act.value = 'constEditComplete';
+										form.submit();
+									}
 }
