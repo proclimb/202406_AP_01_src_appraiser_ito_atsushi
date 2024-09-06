@@ -3,26 +3,25 @@
 //
 // ログイン
 //
-function fnSqlLogin($id)
+function fnSqlLogin($id, $pw)
 {
     $id = addslashes($id);
-    $sql = "SELECT USERNO,AUTHORITY,PASSWORD FROM TBLUSER";
+    $sql = "SELECT USERNO,AUTHORITY FROM TBLUSER";
     $sql .= " WHERE DEL = 1";
     $sql .= " AND ID = '$id'";
+    $sql .= " AND PASSWORD = '$pw'";
 
     return ($sql);
 }
 
 //
-// ユーザー情報登録
+// ユーザー情報リスト
 //
-function fnSqlAdminUserInsert($userNo, $name, $id, $password, $authority)
+function fnSqlAdminUserList()
 {
-    $pass = password_hash($password, PASSWORD_DEFAULT);
-    $sql = "INSERT INTO TBLUSER(";
-    $sql .= "USERNO,NAME,ID,PASSWORD,AUTHORITY,INSDT,UPDT,DEL";
-    $sql .= ")VALUES(";
-    $sql .= "'$userNo','$name','$id','$pass','$authority',CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,1)";
+    $sql = "SELECT USERNO,NAME,ID,PASSWORD,AUTHORITY FROM TBLUSER";
+    $sql .= " WHERE DEL = 1";
+    $sql .= " ORDER BY AUTHORITY ASC,NAME ASC";
 
     return ($sql);
 }
